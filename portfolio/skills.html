@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #282c34;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #333;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            animation: titleAnimation 2s infinite alternate;
+        }
+
+        @keyframes titleAnimation {
+            from {color: #ffcc00;}
+            to {color: #ff6347;}
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #4caf50;
+        }
+
+        /* List Styles */
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        li:hover {
+            color: #ffcc00;
+            cursor: pointer;
+        }
+
+        li::before {
+            content: '➜';
+            color: #ffcc00;
+            margin-right: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:hover::before {
+            transform: scale(1.5);
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #ff6347;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        button:hover {
+            background-color: #4caf50;
+        }
+
+        /* Celebration Box */
+        .celebration-box {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #b74b4b;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: popUp 0.5s ease-in-out;
+        }
+
+        @keyframes popUp {
+            0% { transform: translate(-50%, -60%); opacity: 0; }
+            100% { transform: translate(-50%, -50%); opacity: 1; }
+        }
+
+        .celebration-box h3 {
+            margin: 0;
+            font-size: 24px;
+            color: whitesmoke;
+        }
+
+        .close-btn {
+            background-color: #333;
+            color: #b74b4b;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .close-btn:hover {
+            background-color: #98FB98;
+            ;
+            color: #ffffff;
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            background-color: #444;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        header a.logo {
+            font-size: 24px;
+            color: #b74b4b;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a.active, nav a:hover {
+            color: #b74b4b;
+            background-color: #555;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                width: 95%;
+                margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background: transparent;">
+        <a href="#" class="logo">Tharsha</a>
+
+        <nav>
+            <a href="index.html"> Home</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="forms.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Hello! I'm a passionate full-stack developer with experience in creating responsive websites and web applications. My journey in web development began with a strong interest in both front-end and back-end technologies. Here's a glimpse into my skills, hobbies, and educational background:</p>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Frontend: HTML, CSS, JavaScript, Bootstrap, React</li>
+            <li>Backend: Django, Django Web Framework</li>
+            <li>Projects: Responsive Websites, Django with Bootstrap</li>
+        </ul>
+
+        <h2>Hobbies</h2>
+        <ol>
+            <li>Coding Challenges</li>
+            <li>Designing User Interfaces</li>
+            <li>Reading Tech Blogs</li>
+            <li>Participating in Hackathons</li>
+        </ol>
+
+        <h2>Education</h2>
+        <ul>
+            <li>Schooling: Adarsh Matric Hr. Sec School, Vaniyambadi</li>
+            <li>Bachelor's Degree: Panimalar Institute of Technology, ECE</li>
+            <li>Full Stack Web Development: FITA Academy</li>
+        </ul>
+
+        <h2>Experience & Achievements</h2>
+        <ul>
+            <li>Internships in various tech companies</li>
+            <li>Participated in numerous paper presentations</li>
+            <li>Developed projects using Django and React</li>
+            <li>Freelanced for small businesses</li>
+        </ul>
+
+        <button id="celebrateBtn">Celebrate</button>
+
+        <div class="celebration-box" id="celebrationBox">
+            <h3>Congratulations! 🎉</h3>
+            <p>Thanks for visiting my profile. I hope you enjoy learning about my journey as much as I enjoyed sharing it!</p>
+            <button class="close-btn" id="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Celebration Box
+        document.addEventListener('DOMContentLoaded', function() {
+            const celebrationBox = document.getElementById('celebrationBox');
+            const closeBtn = document.getElementById('closeBtn');
+            const celebrateBtn = document.getElementById('celebrateBtn');
+
+            // Show celebration box on page load
+            celebrationBox.style.display = 'block';
+
+            // Close the celebration box
+            closeBtn.addEventListener('click', function() {
+                celebrationBox.style.display = 'none';
+            });
+
+            // Celebration button click event
+            celebrateBtn.addEventListener('click', function() {
+                celebrationBox.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
